@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     window.onmousemove = function(e){
         console.log(e.clientY < 60);
-        if(e.clientY < 100){
+        if(e.clientY < 150){
             document.querySelector("header").style.top = "0px";
         }else{
             document.querySelector("header").style.top = "-80px";
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById("li" + i).onclick = function(){
             console.log("ok");
             console.log(this.id);
-            console.log(this.id.substr(2,3));
+            console.log(this.id.substr(1,3));
     
             document.getElementById("text" + moveNum).classList.remove("active");
             document.getElementById("text" + moveNum).classList.add("activeOut");
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function(){
         for(var i=0; i<3; i++){
             document.getElementById("pic" + i).style.left = (picWidth * (i-moveNum)) + "px";
         }
-        document.getElementById("temp").innerText = moveNum;
+        // document.getElementById("temp").innerText = moveNum;
         for(var i=0; i<3; i++){
             document.getElementById("li" + i).classList.remove("active");
         }
@@ -78,33 +78,5 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById("text" + moveNum).classList.remove("activeOut");
         document.getElementById("text" + moveNum).classList.add("active");
     }
-    
-    // 좌우 버튼 셋팅 prev_btn, next_btn
-    // let prev_btn = document.createElement("button");
-    // let next_btn = document.createElement("button");
-    // prev_btn.setAttribute("id", "prev_btn");
-    // next_btn.setAttribute("id", "next_btn");
-    // prev_btn.innerText = "prev_btn";
-    // next_btn.innerText = "next_btn";
-    // document.getElementById("ImgSet").appendChild(prev_btn);
-    // document.getElementById("ImgSet").appendChild(next_btn);
-    // prev_btn.classList.add("disabled");
-    
-    // document.getElementById("prev_btn").onclick = function(){
-    //     document.getElementById("text" + moveNum).classList.remove("active");
-    //     document.getElementById("text" + moveNum).classList.add("activeOut");
-    //     if(moveNum > 0){
-    //         moveNum--;
-    //     }
-    //     moveFunsction();
-    // }
-    // document.getElementById("next_btn").onclick = function(){
-    //     document.getElementById("text" + moveNum).classList.remove("active");
-    //     document.getElementById("text" + moveNum).classList.add("activeOut");
-    //     if(moveNum < 2){
-    //         moveNum++;
-    //     }
-    //     moveFunsction();
-    // }
         }
     });

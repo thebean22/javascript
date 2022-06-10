@@ -8,7 +8,7 @@ body {
 }
 #section1 {
     margin-top: 30px;
-    padding: 20px;
+    padding: 30px;
     background-color: rgb(215, 240, 250);
     border-radius: 10%;
 }
@@ -30,7 +30,7 @@ h2 {
 }
 #button {
     background-color: rgba(200, 229, 255, 0.659);
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
 
     width: 100px;
@@ -42,14 +42,6 @@ h2 {
 #button:hover {
     background-color: rgb(255, 255, 255);
     color: black;
-}
-#photos {
-    padding: 10px;
-    height: 100px;
-}
-#photos img{
-    width: 100%;
-    height: auto;
 }
 #wrap {
     margin-top: 100px;
@@ -121,6 +113,7 @@ h2 {
     border: none;
     border-radius: 5px;
     font-size: 16px;
+    font-family: Yeongdo-Rg;
     resize: both;
     background-color: rgba(236, 250, 255, 0.527);
 }

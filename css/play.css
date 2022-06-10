@@ -19,10 +19,13 @@ h2 {
 #section1 #ImgSet #picSet img {height: 100%; position: absolute; top: 0; transition: left 1s; text-align: center;}
  
 #section1 #ImgSet #dotList {margin-top: 20px; text-align: center;}
-#section1 #ImgSet #dotList li {display: inline-block; width: 20px; height: 20px; background-color: black; color: white; border-radius: 50%; cursor: pointer; margin: 0 15px;}
+#section1 #ImgSet #dotList li {
+    display: inline-block; 
+    width: 20px; height: 20px; 
+    background-color: black; color: white; 
+    border-radius: 50%; cursor: pointer; margin: 0 15px; display: hidden;}
 #section1 #ImgSet #dotList li:hover {background-color: rgb(199, 230, 255);}
 #section1 #ImgSet #dotList li.active {background-color: rgb(103, 174, 255);}
- 
  
 #section1 #ImgSet dl {
     position: absolute; 
@@ -41,8 +44,8 @@ h2 {
     from {bottom:0; opacity: 1;}
     to {bottom: 20px; opacity: 0;}
 }
-
-/* #picSet #pic0 {left: 0;} 
-#picSet #pic1 {left: 1440px;}
-#picSet #pic2 {left: 2880px;} */
-/* #picSet #pic2 {left: calc(1440px * 2);} */
+@media only screen and (max-width: 800px) {
+    #ImgSet {
+        margin: 0 auto;
+    }
+}
